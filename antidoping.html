@@ -1,0 +1,134 @@
+<doctype HTML!>
+<html>
+<head>
+	<title>Olympic Games</title>
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+	  <meta charset="UTF-8">
+		<script src="JS/jquery-ui.js"></script>
+		<script src="JS/jquery-3.7.1.min.js"></script>
+		<script src="JS/mylib.js"></script>
+    <script defer src="JS/script.js"></script>
+</head>
+	<body>
+    <div class="header-top-menu">
+      <ul class="main-menu">
+        <li class="desk1"><a href="index.html">HOME</a></li>
+        <li class="desk2"><a href="#">SPORTS</a>
+          <ul class="drop-down">
+            <li><a href="olympics_sport.html">OLYMPICS</a></li>
+            <li><a href="paralympics_sport.html">PARALYMPICS</a></li>
+          </ul>   
+        </li>
+        <li class="desk3"><a href="history.html">HISTORY</a>
+          <ul class="drop-down drop1">
+            <li><a href="antidoping.html">ANTI-DOPING</a></li>
+            <li><a href="athletes.html">OLYMPIC ATHLETES</a></li>
+          </ul>   
+        </li>
+        <li class="desk4"><a href="organize.html">ORGANIZATION</a>
+        <li class="desk5"><a href="olympics.html">OLYMPIC GAMES</a>
+          <ul class="drop-down drop2">
+            <li><a href="paralympics.html">PARALYMPIC GAMES</a></li>
+          </ul>   
+        </li>
+        <li class="desk6"><a href="torch.html">TORCH RELAY</a>
+        </li>
+      </ul>
+    </div><br><br>
+    <div class="image">
+      <a href="index.html"><img src="img/logo11.png"></a>
+    </div> 
+    <main class="organization-section">
+      <section class="name_of_page">
+        <h1><span class="highlight">Anti-doping</span></h1>
+      </section>
+      <div class="outer-container">
+        <section class="text_history">
+            <p>The fight against doping is a real team effort—one that lasts before, during and after the Games.
+               All the stakeholders help to ensure the integrity of competition and protect the health of the athletes.
+               Athletes, spectators, organisers, sponsors—everyone expects a fair competition. In addition to skewing
+                the results, many forbidden substances and methods represent a health risk for the athletes.
+                 Anti-doping measures must protect the physical and mental health of the athletes while defending
+                  the values championed by sport and competition: ethics, perseverance and excelling.</p><br> 
+        </section>  
+          <div class="photo-container">
+            <div class="photo-block">
+                <img src="img/doping1.png" alt="Photo 1" class="photo">
+            </div>
+            <div class="photo-block">
+                <img src="img/doping2.png" alt="Photo 2" class="photo">
+            </div>
+        </div>
+        <section class="text_history">
+          <p>The Olympic and Paralympic Games put an anti-doping programme in place in the 1960s. Since then, the International
+             Olympic Committee (IOC) and International Paralympic Committee (IPC) have set out the anti-doping rules
+              for the Games in line with the World Anti-Doping Agency (WADA) Code.</p><br> 
+      </section>
+      <section class="text_history">
+        <h2 align="center">Russian Doping Scandal</h2><br>
+        <p>The Russian doping scandal came to light in 2015 when a report by the World Anti-Doping Agency (WADA)
+           revealed widespread, state-sponsored doping in Russia. This led to the suspension of the Russian Anti-Doping 
+           Agency (RUSADA) and the banning of many Russian athletes from international competitions.</p><br> 
+        <p>Due to the doping scandal, the International Olympic Committee (IOC) imposed several sanctions on Russia:</p><br>
+          <ul>
+          <li><b>2016 Rio Olympics:</b> Many Russian athletes were banned from competing,
+             particularly in track and field events.</li><br>
+          <li><b>2018 PyeongChang Winter Olympics:</b> Russia was banned from competing as a nation.
+             However, some athletes were allowed to compete under the designation “Olympic Athletes from Russia”
+              (OAR) if they could prove they were clean.</li><br>
+          <li><b>2020 Tokyo Olympics and 2022 Beijing Winter Olympics:</b> Russia was again banned from competing under 
+            its flag. Athletes competed under the name “Russian Olympic Committee” (ROC).</li><br>
+          </ul>
+        </section>
+    <section class="text_history">
+      <h2 align="center">Anti-Doping Measures</h2><br>
+        <ul>
+        <li><b>1967:</b> The International Olympic Committee (IOC) began banning performance-enhancing drugs.</li><br>
+        <li><b>1999:</b> The World Anti-Doping Agency (WADA) was established to coordinate global anti-doping efforts.</li><br>
+        <li><b>2016:</b> The IOC delegated anti-doping rule violations to an independent body, the Court of Arbitration for Sport (CAS).</li><br>
+        </ul>
+  </section>
+  <section class="text_history">
+    <p>Alongside the anti-doping control operations, Paris 2024 will provide the athletes with a range of educational materials.
+       Each doping control station will feature posters and tools to share information on anti-doping regulations and rights.
+        Paris 2024 is also building awareness of the fight against doping among all its volunteers through a dedicated module
+         as part of their training. Lastly, Paris 2024 is setting out its commitment to younger generations by sharing content
+          with French educational staff through its Generation 2024 platform. The aim is to actively help develop a shared 
+          culture for clean sport.</p><br>
+  </section>
+        </div>
+      <div class="center-button">
+        <button class="download-btn" onclick="downloadFile()">Download Anti-doping rules</button>
+      </div>
+    <button class="scroll-to-top" id="scrollToTopBtn"></button>
+    
+    </main>
+  <script>
+    function downloadFile() {
+      const link = document.createElement('a');
+      link.href = 'documents/rules.pdf'; // Замінити на URL до файлу
+      link.download = 'rules.pdf'; // Назва файлу при завантаженні
+      link.click(); // Імітуємо клік
+  }
+  </script>
+    <footer class="footer">
+      <hr>
+      <div class="navbar">
+          <a href="https://olympics.com">Olympics.com</a>
+          <a href="https://olympics.com/en/olympic-channel">Olympic Channel</a>
+          <a href="https://olympics.com/ioc">IOC</a>
+          <a href="https://olympics.com/museum">Museum</a>
+          <a href="https://shop.olympics.com/en/paris-2024/t-1299990829+z-949567-2073334460?_s=bm-fi-ioc-prtsite-P24-see-more-HP-en-nl">Olympic Shop</a>
+          <a href="https://olympics.com/en/olympic-refuge-foundation/">Olympic Refuge Foundation</a>
+          <a href="info.html">About the website</a>
+      </div>
+      <hr><br>
+      <div class="counter">
+        <p id="datetime">Loading...</p>
+        <p>Total number of visitors: <span id="totalVisitors">0</span></p>
+        <p>Number of online visitors (last 5 minutes): <span id="onlineVisitors">0</span></p>
+        </div>
+        <p>© 2024 Veronika Lebedovska. All rights reserved.</p>
+  </footer>
+	</body>
+</html>

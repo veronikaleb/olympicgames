@@ -1,0 +1,1089 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+a, ul, li{
+  text-decoration: none;
+}
+body {
+  font-family: "roboto", sans-serif;
+  background-color: #F8F8FF;
+}
+main {
+  flex: 1; 
+}
+/*scroll*/
+ ::-webkit-scrollbar {
+  width: 12px; 
+}
+::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #D6E6FA;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #ff8a00 #e0e0e0;
+}
+/*up button*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1E90FF; /* Новий колір фону */
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top::before {
+  content: "↑";
+  font-size: 30px; /* Збільшили розмір стрілки */
+  font-weight: bold; /* Товстіша стрілка */
+}
+
+.scroll-to-top:hover {
+  background-color: #187bcd; /* Трохи темніший відтінок при наведенні */
+}
+/*new menu code*/
+.header-top-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-menu li {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.main-menu li a {
+  color: #fff;
+  display: block;
+  padding: 10px;
+}
+.header-top-menu ul, 
+.header-top-menu li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drop-down {
+  position: absolute;
+  width: 100%;
+  display: none;
+  background-color: #1E90FF;
+}
+.desk3:hover .drop-down li:nth-child(1), 
+.desk3:hover .drop-down li:nth-child(2) { 
+  background-color: #333333; 
+}
+.desk5:hover .drop-down li:nth-child(1) { 
+  background-color: #E5AC00;
+}
+.drop-down li:hover a {
+  background-color: #0A3D6B;
+}
+.drop1 li:hover a {
+  background-color: #4D4D4D;
+}
+.drop2 li:hover a {
+  background-color: #B58600;
+}
+.main-menu li:hover .drop-down {
+  display: block;
+}
+
+.drop-down li:nth-child(1), /* OLYMPICS */
+.drop-down li:nth-child(2) { /* PARALYMPICS */
+  background-color: #4682B4;
+}
+
+/* Section colors */
+.desk1 {
+  background: #8B0000;
+}
+
+.desk2 {
+  background: #1E90FF;
+}
+
+.desk3 {
+  background: #000000;
+}
+
+.desk4 {
+  background: #DC143C;
+}
+
+.desk5 {
+  background: #FFD700;
+}
+
+.desk6 {
+  background: #2E8B57;
+}
+.desk1:hover {
+  background: #4B0000; 
+}
+
+.desk2:hover {
+  background: #0A3D6B;
+}
+
+.desk3:hover {
+  background: #1A1A1A; 
+}
+
+.desk4:hover {
+  background: #701515; 
+}
+
+.desk5:hover {
+  background: #8B6508;
+}
+
+.desk6:hover {
+  background: #1C5B3A;
+}
+.image {
+  text-align: center;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+.content-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background:  linear-gradient(90deg, rgba(34,200,237,1) 15%, rgba(253,29,29,1) 53%, rgba(255,244,101,1) 85%);
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.text-left {
+  text-align: left;
+  font-size: 46px;
+  margin-right: 20px;
+  flex: 1;
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+.text-right {
+  text-align: right;
+  font-size: 30px;
+  flex: 2;
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .text-right {
+    text-align: center;
+  }
+}
+
+.image img {
+  max-width: 250px; 
+  width: 100%; 
+  height: auto; 
+}
+
+/*slider*/
+.slideshow-container{
+  padding-top: 0px;
+}
+* {box-sizing: border-box}
+      .indexb {
+      font-family: Verdana, sans-serif;
+      margin:0}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      .slideshow-container {
+      max-width: 1500px;
+      position: relative;
+      margin: auto;
+      }
+      .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      }
+      .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+      }
+      .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+      }
+      .text {
+      color: #ffffff;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      }
+      .numbertext {
+      color: #ffffff;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+      }
+      .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #999999;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      }
+      .active, .dot:hover {
+      background-color: #111111;
+      }
+      .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+      @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+      }
+     
+      @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+      }
+    /*index photoes*/
+    .photoes, .photoes_bg{
+      text-align: center;
+      margin-top: 30px;
+    }
+    .photoes img {
+      width: 75%; 
+      height: auto; 
+    } 
+/*form*/
+.feedback-form {
+  background-color: #F0F8FF;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.feedback-form input, 
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.feedback-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.feedback-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.modal p {
+  font-size: 18px;
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1E90FF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+/*footer*/
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  font-family: Verdana, sans-serif;
+  background: linear-gradient(to right, #8B0000, #1E90FF, #000000, #DC143C, #FFD700, #2E8B57);
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+.footer .navbar {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 0;
+  flex-wrap: wrap; 
+}
+
+.footer .navbar a {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer .navbar a:hover {
+  background-color: #ffffff; 
+  color: #0033A0; 
+}
+
+.footer p {
+  margin: 10px 0 0;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .footer .navbar a {
+      display: block;
+      text-align: center;
+      padding: 10px; 
+  }
+}
+
+@media (max-width: 600px) {
+  .footer p {
+      font-size: 14px;
+  }
+}
+/*other styles index page*/
+.mission {
+  background-color: #F0F8FF; /* Light background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px; /* Max width for better readability */
+  margin: 20px auto; /* Center the section */
+}
+
+.mission h2 {
+  font-size: 24px; /* Larger font size for the heading */
+  color: #333; /* Darker text color for contrast */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.mission p {
+  font-size: 20px; /* Standard font size for paragraphs */
+  line-height: 1.6; /* Improved readability with line height */
+  color: #555; /* Slightly lighter text color */
+}
+.text0{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text1 {
+  text-align: center;
+  font-size: 23px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 25px;
+  border: 2px solid #1E90FF;
+  border-radius: 10px;
+}
+.text2{
+  text-align: center;
+  color: #F8F8FF;
+  font-size: 32px;
+  margin-top: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #87CEEB;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/*types of olympics*/
+   .content, .wrapper, .content_1, .wrapper_1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .content {
+    background: linear-gradient(90deg, rgba(39,184,221,1) 35%, rgba(8,85,168,1) 82%);
+  }
+  .wrapper {
+    background: linear-gradient(90deg, rgba(26,111,18,1) 35%, rgba(35,233,63,1) 93%);
+  }
+  .content_1 {
+    background: linear-gradient(90deg, rgba(242,129,105,1) 35%, rgba(150,22,22,1) 82%);
+  }
+  .wrapper_1{
+    background: linear-gradient(90deg, rgba(152,170,26,0.9820378835127801) 35%, rgba(240,240,108,1) 73%);
+  }
+  .text_r, .description {
+    flex: 1;
+    padding: 10px;
+    text-align: justify;
+  }
+  .text_r h1, .description h1{
+    text-align: center;
+    color: #fff;
+  }
+  .image_type, .photo {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+  }
+  .image_type img, .photo img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+
+    .text_r {
+      order: 1; 
+    }
+
+    .image_type {
+      order: 2; 
+    }
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .description {
+      order: 1; 
+    }
+
+    .photo {
+      order: 2; 
+    }
+  }
+  /*sports page style*/
+  .name_of_page {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px; 
+    padding-right: 20px; 
+}
+
+.color_text_page {
+    color: #1E90FF; 
+}
+
+strong {
+    color: #1E90FF; 
+}
+
+.sports-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.sports-column {
+    width: 30%; 
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+
+.sports-column li:hover {
+    color: #4682B4;
+    cursor: pointer;
+}
+
+
+.sports-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.sports-column li {
+    padding: 5px;
+}
+
+
+.sports-column li strong {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .sports-column {
+        width: 45%; 
+        margin: 0 5px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .sports-column {
+        width: 100%; 
+        margin: 0;
+    }
+}
+
+/*history page*/
+.outer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.text-block {
+  flex: 1;
+  font-size: 20px;
+  text-align: justify;
+}
+.image-block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.image-block img {
+  max-width: 80%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .text-block, .image-block {
+    flex: none;
+    width: 100%;
+  }
+  .image-block img {
+    max-width: 100%;
+  }
+}
+.text_history, .text_history1 {
+  font-size: 20px;
+  padding: 0 5px;
+  text-align: justify; 
+}
+.text_history1 h2{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.text_history5 h1{
+  font-family: "Playpen Sans", cursive;
+  font-style: normal;
+  text-align: center;
+  font-size: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.image-wrapper {
+  text-align: center;
+}
+.image_pierre {
+  max-width: 20%;
+  height: auto;
+}
+.image_1 {
+  max-width: 50%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.caption-text {
+  font-size: 20px;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  .caption-text {
+    font-size: 18px;
+  }
+}
+
+/*history page*/
+.photo-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; 
+  flex-wrap: wrap; 
+  margin: 20px 5px; 
+}
+.photo-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px;
+  flex-wrap: nowrap; 
+  margin: 20px 5px; 
+}
+.photo-block {
+  text-align: center;
+  max-width: 100%; 
+}
+.photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.caption {
+  font-size: 16px;
+  margin-top: 8px;
+}
+@media (max-width: 600px) {
+  .photo-container {
+      flex-direction: column; 
+      gap: 10px; 
+  } 
+  .caption {
+      font-size: 14px; 
+  }
+}
+.photo-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  padding: 10px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+}
+.photo-block_games {
+  flex: 1 1 calc(15% - 10px);
+ max-height: 300px;
+ max-width: 200px;
+}
+.photo-block_games img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.photo-block-wide img{
+  width: 76%;
+  height: auto;
+}
+.photo-block-wide2 img{
+  width: 88%;
+  height: auto;
+}
+.photo-block-wide3 img{
+  width: 60%;
+  height: auto;
+}
+@media (max-width: 600px) {
+  .photo-block_games {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
+
+/*olympics page*/
+.text_history1 {
+  text-align: center;
+  margin: 20px 0;
+}
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.tables-container {
+  display: flex;
+  justify-content: center; /* Центруємо таблиці */
+  gap: 20px; /* Відступ між таблицями */
+  margin: 0 5px; /* Відступи зліва та справа */
+  overflow-x: auto; /* Горизонтальна прокрутка за необхідності */
+}
+.no-shadow {
+  box-shadow: none; 
+}
+.table-wrapper {
+  width: calc(50% - 20px); /* Ширина кожної таблиці */
+  max-width: 600px;
+  background-color: #ffffff;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column; /* Розташування заголовка над таблицею */
+}
+
+.table-wrapper h3 {
+  margin: 0;
+  padding: 10px;
+  background: linear-gradient(to right, #8B0000, #1E90FF, #000000, #DC143C, #FFD700, #2E8B57);
+  color: white;
+  text-align: center;
+}
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4f4f4;
+}
+.responsive-table thead {
+  background: linear-gradient(to right, #8B0000, #1E90FF, #000000, #DC143C, #FFD700, #2E8B57);
+  color: white;
+}
+.responsive-table th, 
+.responsive-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+.responsive-table th {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.responsive-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 800px) {
+  .tables-container {
+    flex-wrap: wrap; /* Дозволяємо перенос елементів на менших екранах */
+  }
+
+  .table-wrapper {
+    width: 100%; /* Робимо таблиці на всю ширину для мобільних */
+  }
+}
+/*organization page*/
+.organization-section {
+  background: #F0F8FF; /* Neutral background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Set a maximum width */
+  margin: 0 auto 30px auto; /* Center align and 30px bottom margin */
+  background-clip: padding-box; /* Ensure background color is only inside the padding */
+}
+
+/* Ensure the section centers with spacing on smaller screens */
+@media (max-width: 1200px) {
+  .organization-section {
+    margin: 0 10px 30px 10px; /* Add margins and 30px bottom margin on smaller screens */
+  }
+}
+.highlight {
+  background-color: #D6E6FA; /* Slightly different color */
+  padding: 5px 15px; /* Padding around the word */
+  border-radius: 5px; /* Rounded corners for a softer look */
+  display: inline-block; /* Make sure the background covers the padded area */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for emphasis */
+}
+/*torch relay page*/
+.horizontal-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('https://en.africatopsports.com/wp-content/uploads/2021/03/IMG_20210325_114650-1-scaled.jpg');
+  background-size: cover;
+  background-position: top center;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 10px;
+  color: black;
+  font-size: 30px;
+  color: #F8F8FF;
+  min-height: 300px;
+}
+
+.left-text {
+  flex: 1;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.right-text {
+  flex: 2;
+  text-align: right;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 600px) {
+  .horizontal-block {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .left-text,
+  .right-text {
+      text-align: center;
+      margin-bottom: 10px;
+  }
+
+  .right-text {
+      font-size: 20px; /* Можна змінити розмір тексту для кращого вигляду на мобільних */
+  }
+}
+.text_history2 {
+  text-align: justify;
+  margin: 20px 0;
+  font-size: 22px;
+  margin-top: 30px;
+}
+.image_11 {
+  max-width: 80%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.torch_background {
+  background-color: #87CEFA;
+  border: 5px solid #1E90FF;
+  border-radius: 10px;
+  padding: 15px; /* Додаємо внутрішні відступи */
+  font-size: 20px; /* Збільшуємо розмір шрифту */
+  line-height: 1.6; /* Збільшуємо міжрядковий інтервал для покращення читабельності */
+  text-align: justify; /* Вирівнюємо текст по ширині */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Додаємо тінь для створення ефекту піднятого блоку */
+}
+/*info page*/
+.info_text {
+  text-align: center; /* Вирівнювання тексту по центру */
+  color: black; /* Чорний колір для основного тексту */
+  font-family: Arial, sans-serif; /* Можна вибрати інший шрифт за бажанням */
+  padding: 20px; /* Внутрішні відступи */
+}
+
+.info_text a {
+  display: block; /* Робимо посилання блоковими елементами, щоб вони займали всю ширину */
+  text-decoration: none; /* Видаляємо підкреслення з посилань */
+  color: black; /* Чорний колір для посилань */
+  margin: 10px 0; /* Відступи між посиланнями */
+  font-size: 18px; /* Збільшений розмір шрифту для посилань */
+  padding: 10px 0; /* Внутрішні відступи для кращого вигляду */
+}
+
+.info_text a:hover {
+  color: #1E90FF; /* Колір посилань при наведенні */
+  transition: color 0.3s ease; /* Плавний перехід кольору */
+}
+
+.info_text p {
+  margin: 15px 0; /* Відступи між абзацами */
+  font-size: 18px; /* Збільшений розмір шрифту */
+}
+/*other styles*/
+.counter {
+  font-size: 16px;
+}
+
+.counter p {
+  margin: 0; /* Видаляємо відступи між абзацами */
+  padding: 0; /* Додаємо, щоб уникнути внутрішніх відступів */
+}
+
+/*antidoping style*/
+.center-button {
+  text-align: center;
+}
+
+.download-btn {
+  background-color: #1E90FF; /* Кнопка кольору #1E90FF */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0A3D6B; /* Темніший синій на hover */
+}
+
+.download-btn:active {
+  background-color: #005f9e; /* Ще темніший при кліку */
+}
+
+/*athletes page*/
+.athletes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  justify-content: center;
+  padding: 10px;
+}
+
+.athletes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  justify-content: center;
+  padding: 10px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: calc(33.333% - 20px); 
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+.card-content img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover; 
+  border-bottom: 1px solid #ddd;
+  display: block;
+}
+
+.card-content h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.card-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 0; 
+}
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; 
+  }
+}
